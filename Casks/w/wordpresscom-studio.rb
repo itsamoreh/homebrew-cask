@@ -24,5 +24,12 @@ cask "wordpresscom-studio" do
 
   uninstall quit: "com.electron.studio"
 
-  # No zap stanza required
+  zap trash: [
+    "~/Library/Preferences/com.electron.studio.plist",
+    "~/Library/Application Support/Studio",
+    "~/Library/Caches/com.electron.studio.ShipIt",
+    "~/Library/Saved Application State/com.electron.studio.savedState",
+    "~/Library/Caches/com.electron.studio",
+    "~/Library/Logs/Studio"
+  ]
 end
